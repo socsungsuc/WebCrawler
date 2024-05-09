@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>HaiSon</title>
+</head>
+<body>
+    <!-- header area -->
+    <header id = "sticky" class = "sticky" style="background: black;">
+        <div class = "container">
+            <div class = "row">
+                <div class = "col">
+                    <div class = "main-menu">
+                        <div class = "menu-left">
+                            <div class = "navbar" style="color: #febd69; cursor: pointer;" onclick="openPanel()">
+                                <i class="fa fa-bars sidebar-bar"></i>
+                            </div>
+                            <div class = "team-logo" style="color: white;">
+                                WEB-CRAWLER
+                            </div>
+                        </div>
+                        <div class = "menu-right">
+                            <div class="search-space">
+                                <form class="search-form" style="display: flex;"> 
+                                    <div class="search-form-fill" style="width: 1000px;">
+                                        <div class="nav-search-field ">
+                                          <label for="twotabsearchtextbox" style="display: none;">Search Product</label>
+                                          <input type="text" id="twotabsearchtextbox" value="" name="field-keywords" autocomplete="off" placeholder="Search Product" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Search Amazon" spellcheck="false">
+                                        </div>
+                                        <div id="nav-iss-attach"></div>
+                                    </div>
+                                    <div class="nav-right">
+                                        <div class="nav-search-submit nav-sprite">
+                                          <span id="nav-search-submit-text" class="nav-search-submit-text nav-sprite nav-progressive-attribute" aria-label="Go">
+                                            <input id="nav-search-submit-button" type="submit" class="nav-input nav-progressive-attribute" value="Go" tabindex="0" style="background-color: #febd69;">
+                                          </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Containerpanel" class="show">
+            <div id="Khungpanel">
+              <div class="Headerpanel">
+                <a class="containeritem" href=""
+                  ><span class="item">HOME</span></a
+                >
+                <a class="containeritem" href="./laptop"
+                  ><span class="item">LAPTOP</span></a
+                >
+                <a class="containeritem" href="./phone"
+                  ><span class="item">PHONE</span></a
+                >
+                <a class="containeritem" href="./accessories"
+                  ><span class="item">ACCESSORIES</span></a
+                >
+                <a class="containeritem" href="./mouse"
+                ><span class="item">MOUSE</span></a
+                >
+                <a class="containeritem" href="./keyboard"
+                ><span class="item">KEYBOARD</span></a
+                >
+                <a class="containeritem" href="./screen"
+                ><span class="item">SCREEN</span></a
+                >
+              </div>
+            </div>
+            <button id="btn_close" onclick="closePanel()">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+
+    <!-- content area -->
+
+    <!-- banner area -->
+    <div class="big-banner">
+        <div class="container">
+            <div class="row-intro">
+                <div class="intro-row-area">
+                    <h2>WELCOME TO OUR CRAWLER WEB</h2>
+                </div>
+            </div>
+        </div>
+        <div class="shop-category">
+            <div class="container-2">
+                <!-- laptop product -->
+                <div class= "PRODUCT" href="./laptop">
+                    <div class="a-cardui-header">
+                        <h3>LAPTOP</h3>
+                    </div>
+                    <div class="a-cardui-body">
+                        <a class="center-image" href="./laptop">
+                            <div class="product-img">
+                                <img src="./image/XCM_CUTTLE_1547020_2941332_758x608_2X_en_US._SY608_CB594693536_.jpg" style="height: 290px;">   
+                            </div>
+                        </a>
+                    </div>
+                    <div class="a-cardui-footer">
+                        <a class="shop-now" href="./laptop">Mua ngay</a>
+                    </div>
+                </div>
+                <!-- phone product -->
+                <div class = "PRODUCT">
+                    <div class="a-cardui-header">
+                        <h3>PHONE</h3>
+                    </div>
+                    <div class="a-cardui-body">
+                        <a class="center-image" href="./phone">
+                            <div class="product-img">
+                                <img src="./image/iPhone-14-Pro-Max-1.jpeg" style="height: 290px;">   
+                            </div>
+                        </a>
+                    </div>
+                    <div class="a-cardui-footer">
+                        <a class="shop-now" href="./phone">Mua ngay</a>
+                    </div>
+                </div>
+                <!-- gaming accessories product -->
+                <div class= "PRODUCT">
+                    <div class="a-cardui-header">
+                        <h3>ACCESSORIES</h3>
+                    </div>
+                    <div class="a-cardui-body">
+                        <a class="center-image" href="./accessories">
+                            <div class="product-img">
+                                <img src="./image/XCM_CUTTLE_1547020_2941332_758x608_2X_en_US._SY608_CB594693536_.jpg" style="height: 290px;">   
+                            </div>
+                        </a>
+                    </div>
+                    <div class="a-cardui-footer">
+                        <a class="shop-now" href="./accessories">Mua ngay</a>
+                    </div>
+                </div>
+                <!-- watch product -->
+                <div class="PRODUCT">
+                    <div class="a-cardui-header">
+                        <h3>MOUSE</h3>
+                    </div>
+                    <div class="a-cardui-body">
+                        <a class="center-image" href="./mouse">
+                            <div class="product-img">
+                                <img src="./image/4041721-gaming-mice.jpeg" style="height: 290px;">   
+                            </div>
+                        </a>
+                    </div>
+                    <div class="a-cardui-footer">
+                        <a class="shop-now" href="./mouse">Mua ngay</a>
+                    </div>
+                </div>
+                <div class="PRODUCT">
+                    <div class="a-cardui-header">
+                        <h3>KEYBOARD</h3>
+                    </div>
+                    <div class="a-cardui-body">
+                        <a class="center-image" href="./keyboard">
+                            <div class="product-img">
+                                <img src="./image/ygvBcHBstV2fYvuS4aMFR4.jpeg" style="height: 290px;">   
+                            </div>
+                        </a>
+                    </div>
+                    <div class="a-cardui-footer">
+                        <a class="shop-now" href="./keyboard">Mua ngay</a>
+                    </div>
+                </div>
+                <div class= "PRODUCT">
+                    <div class="a-cardui-header">
+                        <h3>SCREEN</h3>
+                    </div>
+                    <div class="a-cardui-body">
+                        <a class="center-image" href="./screen">
+                            <div class="product-img">
+                                <img src="./image/XCM_CUTTLE_1547020_2941332_758x608_2X_en_US._SY608_CB594693536_.jpg" style="height: 290px;">   
+                            </div>
+                        </a>
+                    </div>
+                    <div class="a-cardui-footer">
+                        <a class="shop-now" href="./screen">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/home.js"></script>
+</html>

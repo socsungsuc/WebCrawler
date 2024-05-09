@@ -1,0 +1,69 @@
+.main-menu{
+    position: relative;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    z-index: 9;
+}
+
+.main-menu .menu-left{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.main-menu .menu-left .navbar{
+    display: inline-block;
+    padding: 40px 25px 40px 10px;
+    font-size: 25px;
+}
+
+.main-menu .menu-left .team-logo{
+    display: inline-block;
+}
+
+.logo-team{
+    width: 125px;
+    height: 125px;
+}
+
+
+.main-menu .menu-right{
+    display: flex;
+    float: right;
+}
+
+.search-space{
+    display: inline-block;
+    border: 1px solid #8f8f8f;
+    text-align: center;
+    align-self: center;
+    border-radius: 5px;
+}
+
+.search-space .search-form{
+    display: inline-block;
+    width: 750px;
+}
+
+.search-space i{
+    padding-right: 10px;
+    color: #555;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.search-space .search-form input{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+}
+.search-space .search-form select{
+    margin-top: 7px;
+    border: none;
+    width: 50px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

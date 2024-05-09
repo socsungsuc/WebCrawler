@@ -1,0 +1,13 @@
+mouse
+laptop
+keyboard
+other
+screen
+phone 
+use products_db;
+delete from mouse;
+delete from laptop;
+delete from keyboard;
+delete from other;
+delete from screen;
+delete from phone;

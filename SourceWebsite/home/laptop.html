@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="./css/laptop.css">
+    <link rel="stylesheet" href="./css/priceInput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header id = "sticky" class = "sticky" style="background: black;">
+        <div class = "container">
+            <div class = "row">
+                <div class = "col">
+                    <div class = "main-menu">
+                        <div class = "menu-left">
+                            <div class = "navbar" onclick="openPanel()" style="color: #febd69; cursor: pointer;">
+                                <i class="fa fa-bars sidebar-bar"></i>
+                            </div>
+                            <div class = "team-logo" style="color: white;">
+                                WEB-CRAWLER
+                            </div>
+                        </div>
+                        <div class = "menu-right">
+                            <div class="search-space">
+                                <form class="search-form" style="display: flex;"> 
+                                    <div class="search-form-fill" style="width: 1000px;">
+                                        <div class="nav-search-field ">
+                                          <label for="twotabsearchtextbox" style="display: none;">Search Product</label>
+                                          <input type="text" id="twotabsearchtextbox" value="" name="field-keywords" autocomplete="off" placeholder="Search Product" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Search Amazon" spellcheck="false">
+                                        </div>
+                                        <div id="nav-iss-attach"></div>
+                                    </div>
+                                    <div class="nav-right">
+                                        <div class="nav-search-submit nav-sprite">
+                                          <span id="nav-search-submit-text" class="nav-search-submit-text nav-sprite nav-progressive-attribute" aria-label="Go">
+                                            <input id="nav-search-submit-button" type="submit" class="nav-input nav-progressive-attribute" value="Go" tabindex="0" style="background-color: #febd69;">
+                                          </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Containerpanel" class="show">
+            <div id="Khungpanel">
+              <div class="Headerpanel">
+                <a class="containeritem" href="../"
+                  ><span class="item">HOME</span></a
+                >
+                <a class="containeritem" href="./laptop"
+                  ><span class="item">LAPTOP</span></a
+                >
+                <a class="containeritem" href="./phone"
+                  ><span class="item">PHONE</span></a
+                >
+                <a class="containeritem" href="./accessories"
+                  ><span class="item">ACCESSORIES</span></a
+                >
+                <a class="containeritem" href="./mouse"
+                ><span class="item">MOUSE</span></a
+              >
+              <a class="containeritem" href="./keyboard"
+                ><span class="item">KEYBOARD</span></a
+              >
+              <a class="containeritem" href="./screen"
+                ><span class="item">SCREEN</span></a
+              >
+              </div>
+            </div>
+            <button id="btn_close" onclick="closePanel()">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="Content">
+        <div class="SUB-PRODUCT">
+            <div style="display: flex; justify-content: center; padding: 15px 0px; background-color: red; border-radius: 15px;">
+                <ul class="PRODUCT-CATEGORY" id ="product-category">
+                </ul>
+            </div>
+            <div style="margin-top: 15px; display: flex; padding: 10px;">
+                <div class="wrapper-price-input">
+                    <h4>Khoảng giá</h4>
+                    <div class="price-input">
+                        <div class="field">
+                            <input type="text" class="input-min" value = "0đ" readonly>
+                        </div>
+                        <div class="field">
+                            <input type="text" class="input-max" value = "200.000.000đ" readonly>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="range-input">
+                        <input type="range" class="range-min" min = "0" max = "200000000" value = "0" step = "1000000">
+                        <input type="range" class="range-max" min = "0" max = "200000000" value = "200000000" step = "1000000">
+                    </div>
+                </div>
+                <ul class="PRODUCT-FILTER" id = "product-filter">
+                    <h4>Thông số</h4>
+                    <li class = "RAM" id ="ram-filter">
+                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px; background: white;">
+                            <p>RAM</p>
+                            <span></span>
+                            <div class = "FILTER" style="display: none;">
+                                <div class="filter-list  props">
+                                    <!-- <a onclick = "Filter(this)">4 GB</a> -->
+                                    <a onclick = "Filter(this)">8 GB</a>
+                                    <a onclick = "Filter(this)">16 GB</a>
+                                    <a onclick = "Filter(this)">32 GB</a>
+                                    <a onclick = "Filter(this)">64 GB</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class = "CPU" id = "cpu-filter">
+                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px; background: white;">
+                            <p>CPU</p>
+                            <span></span>
+                            <div class = "FILTER" style="display: none;">
+                                <div class="filter-list  props">
+                                    <a onclick = "Filter(this)">Intel Core i9</a>
+                                    <a onclick = "Filter(this)">Intel Core i7</a>
+                                    <a onclick = "Filter(this)">Intel Core i5</a>
+                                    <a onclick = "Filter(this)">Intel Core i3</a>
+                                    <a onclick = "Filter(this)">AMD Ryzen 9</a>
+                                    <a onclick = "Filter(this)">AMD Ryzen 7</a>
+                                    <a onclick = "Filter(this)">AMD Ryzen 5</a>
+                                    <a onclick = "Filter(this)">M1</a>
+                                    <a onclick = "Filter(this)">M2</a>
+                                    <a onclick = "Filter(this)">M1 Pro</a>
+                                    <a onclick = "Filter(this)">M1 Pro</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class = "DISK" id = "disk-filter">
+                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px; background: white;">
+                            <p>DISK</p>
+                            <span></span>
+                            <div class = "FILTER" style="display: none;">
+                                <div class="filter-list  props">
+                                    <a onclick = "Filter(this)">SSD 2 TB</a>
+                                    <a onclick = "Filter(this)">SSD 1 TB</a>
+                                    <a onclick = "Filter(this)">SSD 512 GB</a>
+                                    <a onclick = "Filter(this)">SSD 256 GB</a>
+                                    <a onclick = "Filter(this)">SSD 128 GB</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class = "SCREEN" id = "cpu-filter">
+                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px; background: white;">
+                            <p>SCREEN</p>
+                            <span></span>
+                            <div class = "FILTER" style="display: none;">
+                                <div class="filter-list  props">
+                                    <a onclick = "Filter(this)">11.6 inch</a>
+                                    <a onclick = "Filter(this)">13 inch</a>
+                                    <a onclick = "Filter(this)">13.3 inch</a>
+                                    <a onclick = "Filter(this)">13.6 inch</a>
+                                    <a onclick = "Filter(this)">14 inch</a>
+                                    <a onclick = "Filter(this)">14.2 inch</a>
+                                    <a onclick = "Filter(this)">15.6 inch</a>
+                                    <a onclick = "Filter(this)">16 inch</a>
+                                    <a onclick = "Filter(this)">16.1 inch</a>
+                                    <a onclick = "Filter(this)">16.2 inch</a>
+                                    <a onclick = "Filter(this)">17 inch</a>
+                                    <a onclick = "Filter(this)">17.3 inch</a>
+                                    <a onclick = "Filter(this)">18 inch</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class = "CARD" id = "card-filter">
+                        <div style="border: 1px solid #e0e0e0; border-radius: 4px; cursor: pointer; padding: 5px 10px; background: white;">
+                            <p>CARD</p>
+                            <span></span>
+                            <div class = "FILTER" style="display: none;">
+                                <div class="filter-list  props">
+                                    <a onclick = "Filter(this)">AMD</a>
+                                    <a onclick = "Filter(this)">INTEL</a>
+                                    <a onclick = "Filter(this)">NVIDIA</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id = "num_products" style="display: flex; justify-content: flex-end; font-size: large; font-weight:bolder; margin-bottom: 10px;">
+                
+            </div>
+            <div id = "list_product" class="list_product"></div>
+        </div>
+    </div>
+</body>
+
+<script src="./js/laptop.js"></script>
+<script src="./js/priceInput.js"></script>
+
+</html>
